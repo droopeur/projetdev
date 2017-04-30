@@ -1,0 +1,38 @@
+[
+    {
+      "name": "BMW",
+      "adress": "34, avenue du Technopole, 29280 Plouzane \n Pouzane",
+      "nameRep": "Teddy Turquet",
+      "mail": "tdc@bmw.eu",
+      "tel": "0630450986",
+      "studies": ""
+
+    },
+    {
+        "name": "Renault",
+        "adress": "65, avenue du Technopole, 29280 Plouzane",
+        "nameRep": "Jean louis Borlo",
+        "mail": "tdc@ntm.eu",
+        "tel": "0623771287",
+        "studies": ""
+
+    },
+    {
+      "name": "BMW",
+      "adress": "34, avenue du Technopole, 29280 Plouzane",
+      "nameRep": "Teddy Turquet",
+      "mail": "tdc@bmw.eu",
+      "tel": "0630450986",
+      "studies": ""
+
+    },
+    {
+        "name": "Renault",
+        "adress": "65, avenue du Technopole, 29280 Plouzane",
+        "nameRep": "Jean louis Borlo",
+        "mail": "tdc@ntm.eu",
+        "tel": "0623771287",
+        "studies": ""
+
+    }
+  ]

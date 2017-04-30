@@ -1,0 +1,90 @@
+<div class="container">
+<nav class="nav nav-tabs nav-justified ">
+       <div class="container-fluid">
+         <ul class="nav navbar-nav navbar-left">
+              <li><a  (click)="section='client'">Clients</a></li>
+              <li><a (click)="section='member'">Membres</a></li>
+              <li><a (click)="section='old'">Anciens</a></li>
+            </ul>
+        </div>
+
+</nav>
+
+</div>
+<div *ngIf="section=='client'" class="panel panel-default">
+  <div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Raison Sociale</th>
+        <th>Adresse</th>
+        <th>Nom representant</th>
+        <th>Mail</th>
+        <th>Telephone</th>
+        <th>Etudes </th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor='let client of clients'>
+        <td>{{client.name}}</td>
+        <td>{{client.adress}}</td>
+        <td>{{client.nameRep}}</td>
+        <td>{{client.mail}}</td>
+        <td>{{client.tel}}</td>
+        <td>{{client.studies}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+</div>
+<div *ngIf="section=='member'">
+  <div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Fonction</th>
+        <th>Mail</th>
+        <th>Telephone</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor='let member of members'>
+        <td>{{member.name}}</td>
+        <td>{{member.surname}}</td>
+        <td>{{member.function}}</td>
+        <td>{{member.mail}}</td>
+        <td>{{member.tel}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+</div>
+<div *ngIf="section=='old'">
+  <div class="container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Prenom</th>
+          <th>Poste</th>
+          <th>Mail</th>
+          <th>Telephone</th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr *ngFor='let older of olders'>
+          <td>{{older.surname}}</td>
+          <td>{{older.name}}</td>
+          <td>{{older.function}}</td>
+          <td>{{older.mail}}</td>
+          <td>{{older.tel}}</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
