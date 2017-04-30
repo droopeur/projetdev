@@ -1,7 +1,7 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../_models/index';
-import { UserService } from '../_services/index';
+import { UserService } from '../_services/user.service';
 
 @Component({
     moduleId: module.id,
@@ -10,18 +10,20 @@ import { UserService } from '../_services/index';
 
 export class HomeComponent {
 
+public user : User
 
   constructor(
+      private userService: UserService,
       private router: Router,
       ) { }
 
-
-  logout() {
-
-    this.router.navigate(['/login']);
-    location.reload();
-
-  }
+      ngOnInit() {
+          // get users from secure api end point
+          this.userService.getUsers()
+              .subscribe(users => {
+                  this.user = users[0];
+              });
+      }
 
 
 
